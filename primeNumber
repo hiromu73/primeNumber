@@ -1,0 +1,38 @@
+
+
+
+// 1～10000の素数を表示する。
+
+// 素数割り出し
+function getPrimeNumber(num) {
+  let flg = 0;
+  for (let i = 2; i <= num; i++) {
+    if (num === i) {
+      flg = i;
+      break;
+    } else if (num % i == 0) {
+      flg = i;
+      break;
+    } else {
+    }
+  }
+  if ( num == flg ) {
+    return true;
+  } else if ( num % flg ==0 )  {
+    return false;
+  } else {
+    return false;
+  }
+}
+
+// 結果
+let prime_numbers = [];
+
+// 1~10000まで
+for (let i = 2; i <= 10000; i++) {
+  if (getPrimeNumber(i) === true) {
+    prime_numbers.push(i);
+  }
+}
+
+console.log(prime_numbers);
